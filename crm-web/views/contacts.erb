@@ -6,15 +6,26 @@
 	</head>
 	<body>
 
-		<ul>
-
 		 <header class="contacthead"> <h1> Jason's rad friends and family </h1></header>
 
-		 <% @collection.each do |contact| %>
-		<li class = contactdisplay> <h4> <%=contact.first_name %> <%=contact.last_name %> </h4> <%=contact.email  %> <%=contact.note  %>  </li>
+	<div class ="contactcounter">
+		<p> there are () contacts in the list </p>
+		<%@collection.each do|elements|%>
+		<%=collection.length%>
 		<%end%>
-		</ul>
+	</div>
 
+	<div class = "bigbox">
+		 <ul class = contactdisplay>
+		 <% @collection.each do |contact| %>
+		<li> <h4> <%=contact.first_name %> <%=contact.last_name %> </h4> <%=contact.email %> <%=contact.note %>  </li>
+		<%end%>
+
+
+			<p>
+
+		</ul>
+	</div>
 
 
 	</body>
